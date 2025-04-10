@@ -47,7 +47,7 @@ a{
         display:block;
     }
 }
-#hero{
+/*#hero{
   display: flex;
     align-items: center;
     justify-content: space-around;
