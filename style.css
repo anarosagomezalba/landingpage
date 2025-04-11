@@ -173,4 +173,28 @@ bottom:150px ;
 button:hover{
     transform: scale(1.05);
 }
+@media (max-width: 768px) {
+    .tarjetas > div {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .tarjetas > div > div {
+      width: 90%;
+    }
+  
+    .tarjetas img {
+      width: 100%;
+      height: auto;
+    }
+  
+    button {
+      margin top: 35px;
+      margin-right: 20px;
+      padding: 12px 20px;
+    }
+}
+  
+  
  
