@@ -326,7 +326,6 @@ background-color: #ddd;
     height:100%;
     flex-direction: row;
     overflow: hidden;
-    position:absolute;
     z-index: 0;
     margin: 0;
  }
@@ -394,11 +393,16 @@ background-color: #ddd;
 }
 .last-text button{
     padding: 12px 20px;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    
+
+}
+.last-text button:hover{
+
 }
 .foto-rueda{
     flex:1;
@@ -409,3 +413,70 @@ background-color: #ddd;
     border-radius: 10px;
     object-fit: cover;
 }
+
+.header-dos {
+  display: flex;
+    background-color: grey;
+    color: white;
+    padding: 20px 40px;
+    width:100%;
+    height: 100px;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.header-dos p{
+    margin: 0;
+    flex:1;
+    min-width: 250px;
+}
+.header-dos button {
+  
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-self: flex-start;
+    left: 75%;
+    transition: 0.3s;
+
+}
+
+.header-dos button:hover {
+    background-color: #ddd;
+}
+/*.header-dos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .header-dos p {
+    margin: 0;
+    font-size: 18px;
+    flex: 1;
+  }
+  
+  .header-dos button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .header-dos button:hover {
+    background-color: #ddd;
+  }
