@@ -1,8 +1,21 @@
+:root {
+  --color-principal: #000000;
+  --color-secundario: #ffffff;
+  --color-acento: #c0b283;
+  --fuente-general: 'Montserrat', sans-serif;
+  --borde-general: 2px solid var(--color-principal);
+  --radio-borde: 10px;
+}
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+   font-family: var(--fuente-general);
+    color: var(--color-principal);
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -274,6 +287,24 @@ z-index: 1;
     right: 20%;
     
 }
+.boton-descubre {
+    
+    background-color: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-start;
+    text-decoration: none; 
+    color: black;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+
+}
+.boton-descubre:hover {
+    background-color: #ddd;
+}
  .contenido-caja button:hover{
 background-color: #ddd;
  }
@@ -440,7 +471,7 @@ background-color: #ddd;
 
 .header-dos {
   display: flex;
-    background-color: grey;
+    background-color: var(--color-acento);
     color: white;
     padding: 20px 40px;
     width:100%;
@@ -494,141 +525,140 @@ background-color: #ddd;
     }
   }
   .footer {
-    background-color: #111;
-    color: white;
-    padding: 60px 40px;
-    font-family: sans-serif;
-  }
-  
-  .newsletter {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .newsletter h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .newsletter p {
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-  
+  background-color: #111;
+  color: white;
+  padding: 60px 40px;
+  font-family: var(--fuente-general);
+}
+
+.newsletter {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.newsletter h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin-bottom: 25px;
+  flex-wrap: wrap; 
+}
+
+.newsletter-form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: var(--radio-borde);
+  border: none;
+  font-size: 16px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.newsletter-form button {
+  padding: 12px 20px;
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  border: none;
+  border-radius: var(--radio-borde);
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+    margin-left: 75%;
+   align-self: center;
+}
+
+.newsletter-form button:hover {
+  background-color: #ccc;
+}
+
+
+
+.checkbox {
+  font-size: 14px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkbox a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.social-icons i {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+  color: #bbb;
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-links li:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
   .newsletter-form {
-    margin-bottom: 15px;
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .input-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: nowrap;
-  
+
+  .newsletter-form input,
+  .newsletter-form button {
+    width: 100%;
   }
+}
+
+
+
   
-  .input-wrapper input[type="email"] {
-    flex: 1;
-    padding: 12px 16px;
-    border-radius: 8px;
-    border: none;
-    font-size: 16px;
-    min-width: 0;
-  }
-  
-  .input-wrapper button {
-    white-space: nowrap;
-    padding: 12px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background-color 0.3s ease;
-  }
-  
-  .input-wrapper button:hover {
-    background-color: #ccc;
-  }
-  
-  .checkbox {
-    font-size: 14px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .checkbox a {
-    color: white;
-    text-decoration: underline;
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-  
-  .social-icons i {
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons i:hover {
-    color: #bbb;
-  }
-  
-  .footer-links {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    border-top: 1px solid #333;
-    padding-top: 40px;
-  }
-  
-  .footer-links h4 {
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
-  .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .footer-links li:hover {
-    text-decoration: underline;
-  }
-  @media (max-width: 768px) {
-    .input-wrapper {
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .input-wrapper input[type="email"],
-    .input-wrapper button {
-      width: 100%;
-    }
-  
-    .footer-links {
-      flex-direction: column;
-      gap: 30px;
-    }
-  
-    .social-icons {
-      justify-content: center;
-    }
-  }
