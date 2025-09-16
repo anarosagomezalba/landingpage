@@ -90,10 +90,16 @@ a{
 
     
  }
- .tarjetas {
-   display:flex;
-   
+ .texto-encabezado h1{
+  font-size: clamp(1.4rem, 3vw, 3rem);
  }
+
+
+ .tarjetas {
+     display:flex;
+}
+   
+ 
 
     .tarjetas > div {
         display: flex; 
@@ -126,54 +132,19 @@ a{
 
 
 
-.coche1>img{
-    border: 2px solid black;
-    border-radius: 10%;
-    object-fit: cover;
-   width: 500px;
-    height:75%;
 
-
-    
-
-}
-.coche2>img{
-    border: 2px solid black;
-    border-radius: 10%;
-    object-fit: cover;
-   width: 500px;
-    height: 75%;
-  
-
-}
-
-.coche3>img{
-    border: 2px solid black;
+.card-car>img{
+   border: 2px solid black;
     border-radius: 10%;
     object-fit: cover;
     width: 500px;
     height: 75%;
-   
-
-}
-.coche4>img{
-    border: 2px solid black;
-    border-radius: 10%;
-    object-fit: cover;
-    width: 500px;
-    height: 75%;
-   
-
 
 }
 
-.coche1 button,
-.coche2 button,
-.coche3 button,
-.coche4 button{
-
-position:relative;
-bottom:150px ;
+.card-car button {
+  position:relative;
+  bottom: 150px;
 }
 .boton3{
     right: 5%;
@@ -182,10 +153,7 @@ bottom:150px ;
 .boton4{
     right: 5%;
 }
-.coche1:hover, 
-.coche2:hover,
-.coche3:hover,
-.coche4:hover {
+.card-car:hover{
     transition: 0.5s;
     transform: scale(1.05);
 }
@@ -209,11 +177,11 @@ button:hover{
     }
   
     button {
-      margin top: 35px;
+      margin-top: 35px;
       margin-right: 20px;
       padding: 12px 20px;
     }
-}
+};
   
  .encabezado-dos{
  
@@ -308,7 +276,7 @@ z-index: 1;
  .contenido-caja button:hover{
 background-color: #ddd;
  }
-@media (max-width:800) {
+@media (max-width:800px) {
     .contenido-caja {
         top: 50%;
         right: 50%;
@@ -333,7 +301,7 @@ background-color: #ddd;
     flex-direction: row;
     gap: 50px;
     overflow-x: auto;
-  margin-left: 75px;
+
   margin-bottom: 80px;
 
 
@@ -423,19 +391,17 @@ background-color: #ddd;
     margin-bottom: 25px;
 
 }
-.last-text button{
-    padding: 12px 20px;
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    
-
+.btn{
+   display: inline-block;
+  padding: 12px 20px;
+  border-radius: var(--radio-borde);
+  background: var(--color-secundario);
+  color: var(--color-principal);
+  text-decoration: none;
+  font-weight: 600;
 }
-.last-text button:hover{
 
-}
+  
 .foto-rueda{
     flex:1;
 }
